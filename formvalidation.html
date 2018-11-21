@@ -4,7 +4,9 @@
 	<title></title>
 </head>
 <body>
+	<p id = "demo"> Date </p>
 <form name="RegForm" onsubmit="return ValidityForm()" method="post" >
+	
 	<p>Name:<input type="text" name="Name"></p><br>
 	<p>Age:<input type="number" name="Age"></p><br>
 	<p>Address:<input type="text" name="Address"></p><br>
@@ -41,6 +43,9 @@
 			}
 			return true;
 		}
+
+		var d = new Date()
+		document.getElementById("demo").innerHTML = d;
 	</script>
 	
 	
