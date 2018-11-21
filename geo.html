@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang = "en">
+<head>
+<title>Geolocation APi</title>
+<meta charset = "utf-8">
+<script type = "text/javascript">
+window.onload = getLocation
+var geo = navigator.geolocation;
+function getLocation(){
+if(geo){
+geo.getCurrentPosition(displayLocation);
+}
+else
+{
+document.write("OOPS Geolocation API is not supported");
+}
+}
+function displayLocation(position){
+var latitude = position.coords.latitude;
+var longitude =position.coords.longitude;
+var timestamp = position.timestamp;
+var div = document.getElementById('location');
+div.innerHTML = "Your Location is Latitude : " + latitude  + " and longitude :  " + longitude + "  Time is  "  +timestamp;
+}
+</script>
+</head>
+<body>
+<div class = "container">
+Your Locations are 
+<div id = "location">
+You are at Latitude and Longitude
+</div>
+</div>
+</body>
+<html> 
+<html> 

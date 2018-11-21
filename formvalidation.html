@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<form name="RegForm" onsubmit="return ValidityForm()" method="post" >
+	<p>Name:<input type="text" name="Name"></p><br>
+	<p>Age:<input type="number" name="Age"></p><br>
+	<p>Address:<input type="text" name="Address"></p><br>
+	<p>Phone:<input type="number" name="Phone"></p><br>
+	<p><input type="Submit" name="Submit"></p><br>
+
+	<script type="text/javascript">
+		function ValidityForm() {
+			var name = document.forms["RegForm"]["Name"];
+			var age = document.forms["RegForm"]["Age"];
+			var address = document.forms["RegForm"]["Address"];
+			var phone = document.forms["RegForm"]["Phone"];
+			// body...
+
+			if (name.value == "") {
+				window.alert("Please Enter the name");
+				name.focus();
+				return false;
+			}
+				if (age.value == "") {
+				window.alert("Please Enter the age");
+				name.focus();
+				return false;
+			}
+				if (address.value == "") {
+				window.alert("Please Enter the address");
+				name.focus();
+				return false;
+			}
+				if (phone.value == "") {
+				window.alert("Please Enter the phone");
+				name.focus();
+				return false;
+			}
+			return true;
+		}
+	</script>
+	
+	
+	
+</form>
+</body>
+</html>

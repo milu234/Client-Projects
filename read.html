@@ -1,0 +1,21 @@
+<html>
+<head>
+<script type="text/javascript">
+function readData(){
+var cookies = document.cookie;
+document.write("Data of all Cookies : " + cookies);
+arr = allcookies.split(';');
+for (var i = 0;i<arr,length;i++){
+name = arr[i].split('=')[0];
+value = arr[i].split('=')[1];
+document.write("Name is : " + name + "Value is " + value);
+}
+}
+</script>
+</head>
+<body>
+<form name = "frm" action="">
+<p> Click to get Cookie data</p>
+<input type = "button" onclick="readData()" value="Get Data"/>
+</form></body>
+</html>

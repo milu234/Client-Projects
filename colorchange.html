@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	colors = new Array("Red","Blue","Green","Orange","Purple","Red");
+	colorIndex = 0;
+
+	function changeColor() {
+		// body...
+		document.bgColor = colors[colorIndex];
+		colorIndex = (colorIndex + 1) % colors.length;
+	}
+
+	function startColorChange(){
+		setInterval("changeColor()",30);
+	}
+
+	window.onload = startColorChange;
+	
+
+</script>
+</body>
+</html>
