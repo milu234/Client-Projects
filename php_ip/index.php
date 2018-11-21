@@ -41,6 +41,7 @@ tr:nth-child(even) {
 			</tr>
 			<?php
 	$v=mysqli_query($conn,"SELECT * from details");
+	
 	while ($row = $v->fetch_assoc()) {?>
 		<tr>
 			<td><?php echo $row['name']; ?></td>
@@ -56,8 +57,24 @@ tr:nth-child(even) {
 			</form>
 			
 		</tr>
+</table>
 
-	<?php } ?>
-		</table>
+	<?php }?>
+	
+	<div>
+	<?php
+	$v=mysqli_query($conn,"SELECT * from details");
+	$count = mysqli_num_rows($v);
+	$a = ceil($count/10);
+
+	for ($i=1; $i <=$a ; $i++) { ?>
+		<a href=""><?php echo $i." "; ?></a>
+		<?php
+		
+	}
+
+	 ?>
+	 </div>
+		
 </body>
 </html>
